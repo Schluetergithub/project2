@@ -9,6 +9,8 @@ CREATE TABLE qbs(
   player_position VARCHAR(50) NOT NULL,
   yards_gained INT default 0,
   touchdowns INT default 0,
+  createdAt DATE,
+  updatedAt DATE,
   PRIMARY KEY (id)
 );
 
@@ -23,6 +25,8 @@ CREATE TABLE wrs(
   player_position VARCHAR(50) NOT NULL,
   yards_gained INT default 0,
   touchdowns INT default 0,
+  createdAt DATE,
+  updatedAt DATE,
   PRIMARY KEY (id)
 );
 
@@ -37,6 +41,8 @@ CREATE TABLE rbs(
   player_position VARCHAR(50) NOT NULL,
   yards_gained INT default 0,
   touchdowns INT default 0,
+  createdAt DATE,
+  updatedAt DATE,
   PRIMARY KEY (id)
  ); 
 

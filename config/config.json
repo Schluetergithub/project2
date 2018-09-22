@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "jpsql008$",
+    "password": "root",
     "database": "fantasyPlayers_db",
     "host": "localhost",
     "dialect": "mysql"
