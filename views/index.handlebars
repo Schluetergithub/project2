@@ -13,9 +13,16 @@
             <label for="example-description">Password</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="password-text" placeholder="Enter Password">
           </div>
-          <div class="btn-group">
-          <button id="submit" class="btn btn-primary float-right">Login</button>
-          <button id="submit" class="btn btn-primary float-right">Continue as Guest</button>
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" arial-label="First group">
+              <button id="submit" class="btn btn-primary float-right">Login</button>
+            </div>
+            <div class="btn-group mr-2" role="group" arial-label="Second group">
+              <a href="/signup" class="btn btn-primary float-right">Register</a>
+            </div>
+            <div class="btn-group mr-2" role="group" arial-label="Third group">
+              <a href="/guest" class="btn btn-primary float-right">Continue as Guest</a>
+            </div>
           </div>
         </form>
 <!--        <h3>Examples:</h3>
