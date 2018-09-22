@@ -30,6 +30,14 @@ CREATE TABLE players(
   
   receivingTouchdowns INT default 0,
   
+  gameScore INT default 0,
+  
+  playerValue INT default 0,
+  
+  createdAt DATE,
+  
+  updatedAt DATE,
+  
   PRIMARY KEY (id)
 );
 
@@ -37,5 +45,21 @@ INSERT INTO players (qb_name,qb_routename,passingYards_gained,passingTouchdowns,
 VALUES('Tom Brady','tombrady',300,4,'Todd Gurley','toddgurley',200,2,'Brandon Cooks','brandoncooks',150,2),
       ('Jared Goff','jaredgoff',275,3,'Dalvin Cook','dalvincook',120,1,'Stefon Diggs','stephondiggs',100,1),
       ('Kirk Cousins','kirkcousins',225,2,'Latavius Murray','lataviusmurray',50,1,'Robert Woods','robertwoods',125,1);
-      
+
+
+      CREATE TABLE user(
+  id int  not NULL AUTO_INCREMENT,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  user_password VARCHAR(50) NOT NULL,
+  user_passconfirm VARCHAR(50) NOT NULL,
+  agree boolean DEFAULT TRUE,
+  team_name VARCHAR(50) NULL,
+  currency INT default 0,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO user (first_name,last_name,email,user_password,user_passconfirm,agree,team_name,currency)
+VALUES ('Jerry', 'P','jpangeli514@gmail.com','ffjer','ffjer',true);
 
