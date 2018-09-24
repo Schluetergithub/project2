@@ -17,12 +17,20 @@ $("#add-team").on("click", function(event) {
   event.preventDefault();
 
   var newTeam = {
-    teamname: $("#teamname-input").val().trim(),
+    team_name: $("#teamname-input").val().trim(),
     qb_name: $("#Qbs").val().trim(),
     rb_name: $("#Rbs").val().trim(),
     wr_name: $("#Wrs").val().trim()
   };
 
   console.log(newTeam);
+
+  // Check the user log in.
+
+  // Compare it to the database.
+
+  // Update the team name to the user table.
+  
+  // Post to the roster table.
 
 });
