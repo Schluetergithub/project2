@@ -12,3 +12,17 @@ $.get("/api", function(data) {
     $("#character-well-" + i).append("<h3>Player Value: " + data[i].qbPlayerValue + "</h4>");
   }
 });
+
+$("#add-team").on("click", function(event) {
+  event.preventDefault();
+
+  var newTeam = {
+    teamname: $("#teamname-input").val().trim(),
+    qb_name: $("#Qbs").val().trim(),
+    rb_name: $("#Rbs").val().trim(),
+    wr_name: $("#Wrs").val().trim()
+  };
+
+  console.log(newTeam);
+
+});
