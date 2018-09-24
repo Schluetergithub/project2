@@ -13,4 +13,5 @@
   PRIMARY KEY (id)
 );
 INSERT INTO users (first_name,last_name,email,user_password,user_passconfirm,agree)
-VALUES ('Jerry', 'P','jpangeli514@gmail.com','ffjer','ffjer',true);
+VALUES 	('Jerry', 'P','jpangeli514@gmail.com','ffjer','ffjer',true),
+		('New', 'User', 'guest@guest.com', 'guest', 'guest', true);

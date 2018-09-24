@@ -1,3 +1,5 @@
+var currentUser = "";
+
 $.get("/api", function(data) {
 
   for (var i = 0; i < data.length; i++) {
@@ -27,7 +29,28 @@ $("#add-team").on("click", function(event) {
 
   // Check the user log in.
 
-  // Compare it to the database.
+  if (currentUser == "") {
+    currentUser = "guest@guest.com";
+    console.log("You are currently signed in as" + currentUser + ".");
+    console.log("Your team will be saved to the database, but will be wiped upon server reset.");
+    newTeam.email = currentUser;
+  }
+
+  // Compare the user email to the database.
+
+  $.get("/api/users", function(data) {
+
+    for (var i = 0; i < data.length; i++) {
+
+      if (data[i].email == newTeam.email) {
+
+        
+
+      }
+
+    }
+
+  })
 
   // Update the team name to the user table.
   
