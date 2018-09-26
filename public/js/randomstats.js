@@ -9,6 +9,9 @@
 // add things for fumbles and interceptions
 
 var qbYardsTotal = 0;
+var qbTouchdownsTotal = 0;
+var qbTouchdownScoreConverted;
+var qbTotalScore = 0;
 
 $(document).ready(function()
 {
@@ -37,9 +40,6 @@ $(document).ready(function()
 
 
 
-
-
-
     }); //end on onclick function
      
 });//end of doc.ready
@@ -56,7 +56,20 @@ function qbStats() {
     console.log(qbYards);
 
     // touchdown every 21 seconds
+    var qbTouchdowns = getRandomInt(0,2);
+
+    (qbTouchdownsTotal = qbTouchdownsTotal + qbTouchdowns);
+    $("#qbTouchdowns").html(qbTouchdownsTotal);
+    console.log(qbTouchdowns);
     //Math.random()>.5;
+
+    (qbTouchdownScoreConverted = qbTouchdownsTotal * 6);
+   
+
+    (qbTotalScore = qbTouchdownScoreConverted + qbYardsTotal);
+    $("#qbScore").html(qbTotalScore);
+    console.log(qbTotalScore);
+
 
     // hailMary touchdown every 59 seconds
     //Math.random()>.9;
