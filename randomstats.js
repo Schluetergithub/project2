@@ -13,7 +13,7 @@ $(document).ready(function()
     var gameInterval;
     var intervalCount = 0;
 
-    $('#simulate').on('click',function(){
+    $('#simulate-btn').on('click',function(){
        
         gameInterval = setInterval(function() {
             intervalCount++;
