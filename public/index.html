@@ -3,15 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
 
   <title>Fantasy Star League</title>
@@ -22,28 +26,41 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1>Welcome to Fantasy Star League!</h1>
+          <h1 id="header">Welcome to Fantasy Star League!</h1>
         </div>
       </div>
       <br>
 
       <div class="row">
         <div class="col-6 text-center">
-          <h4>Enter a Username</h4>
+          <h4 class="topper">Enter a Username</h4>
           <form>
             <div class="form-group">
-              <input type="text" class="form-control" id="createusername" placeholder="Username">
+              <input type="text" class="form-control" id="createusername" placeholder="">
             </div>
           </form>
         </div>
         <div class="col-6 text-center">
 
-          <h4>Select a Team</h4>
-          <select>
+          <h4 class="topper">Select a Team</h4>
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+          </ul>
+
+          <!-- <select>
             <option value="team1">Team 1</option>
             <option value="team2">Team 2</option>
             <option value="team3">Team 3</option>
-          </select>
+          </select> -->
 
           <br>
 
@@ -52,22 +69,22 @@
               <br>
               <table align="center">
                 <tr>
-                  <th>Player</th>
-                  <th>Yards Gained</th>
-                  <th>Touchdowns</th>
-                  <th>Score</th>
+                  <th class="options">Player</th>
+                  <th class="options">Yards Gained</th>
+                  <th class="options">Touchdowns</th>
+                  <th class="options">Score</th>
                 </tr>
 
                 <tr id="qbRow">
-                  <td>QB - Tom Brady</td>
+                  <td class="options">QB - Tom Brady</td>
                 </tr>
 
                 <tr id="rbRow">
-                  <td>RB - Todd Gurley</td>
+                  <td class="options">RB - Todd Gurley</td>
                 </tr>
 
                 <tr id="wrRow">
-                  <td>WR - Brandon Cooks</td>
+                  <td class="options">WR - Brandon Cooks</td>
                 </tr>
 
               </table>
@@ -80,7 +97,7 @@
 
       <div class="row">
         <div class="col-12 text-center">
-          <button id="simulate-btn">Simulate</button>
+          <button id="simulate-btn" a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">Play</i></a></button>
         </div>
       </div>
     </div>
