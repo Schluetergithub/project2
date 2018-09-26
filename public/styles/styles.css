@@ -1,7 +1,22 @@
+body {
+background-color: rgb(71, 151, 81);
+}
+
 .list-group-item {
   line-height: 2.5;
 }
 
 th {
   padding: 20px;
+}
+#header{
+  font-family: 'Ultra', serif;
+}
+
+.topper{
+  font-family: 'Titillium Web', sans-serif;
+}
+.options{
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
 }
