@@ -1,7 +1,6 @@
 var currentUser = "";
-
 $.get("/api", function(data) {
-
+/*
   for (var i = 0; i < data.length; i++) {
     var wellSection = $("<div>");
     wellSection.addClass("well");
@@ -12,11 +11,11 @@ $.get("/api", function(data) {
     $("#character-well-" + i).append("<h3>Yards Gained: " + data[i].passingYards_gained + "</h4>");
     $("#character-well-" + i).append("<h3>Touchdowns: " + data[i].passingTouchdowns + "</h4>");
     $("#character-well-" + i).append("<h3>Player Value: " + data[i].qbPlayerValue + "</h4>");
-  }
+  }*/
 });
 
 $("#add-team").on("click", function(event) {
-  event.preventDefault();
+  /*event.preventDefault();
 
   var newTeam = {
     team_name: $("#teamname-input").val().trim(),
@@ -55,5 +54,6 @@ $("#add-team").on("click", function(event) {
   // Update the team name to the user table.
   
   // Post to the roster table.
-
+*/
 });
+
