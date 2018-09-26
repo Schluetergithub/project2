@@ -13,6 +13,16 @@ var qbTouchdownsTotal = 0;
 var qbTouchdownScoreConverted;
 var qbTotalScore = 0;
 
+var rbYardsTotal = 0;
+var rbTouchdownsTotal = 0;
+var rbTouchdownScoreConverted;
+var rbTotalScore = 0;
+
+var wrYardsTotal = 0;
+var wrTouchdownsTotal = 0;
+var wrTouchdownScoreConverted;
+var wrTotalScore = 0;
+
 $(document).ready(function()
 {
     var gameInterval;
@@ -27,6 +37,50 @@ $(document).ready(function()
             qbStats();
             // rbStats();
             // wrStats();
+
+
+
+            if(intervalCount == 10){
+                clearInterval(gameInterval);
+            }
+
+            
+         }, 1000); // end of interval
+    
+
+
+
+    }); //end on onclick function
+
+    $('#simulate-btn').on('click',function(){
+       
+        gameInterval = setInterval(function() {
+            intervalCount++;
+            // qbStats();
+            rbStats();
+            // wrStats();
+
+
+
+            if(intervalCount == 10){
+                clearInterval(gameInterval);
+            }
+
+            
+         }, 1000); // end of interval
+    
+
+
+
+    }); //end on onclick function
+
+    $('#simulate-btn').on('click',function(){
+       
+        gameInterval = setInterval(function() {
+            intervalCount++;
+            // qbStats();
+            // rbStats();
+            wrStats();
 
 
 
@@ -76,25 +130,25 @@ function qbStats() {
 };
 
 function rbStats() {
-// rb calculations
-// every 5 seconds 
-Math.floor(Math.random()*250)/10;
+    // rb calculations
+    // every 5 seconds 
+    Math.floor(Math.random()*250)/10;
 
-// touchdown every 25 seconds
-Math.random()>.5;
+    // touchdown every 25 seconds
+    Math.random()>.5;
 };
 
 function wrStats() {
-// wr calculations
-// wr every 7 seconds
-Math.floor(Math.random()*250)/10;
+    // wr calculations
+    // wr every 7 seconds
+    Math.floor(Math.random()*250)/10;
 
-// touchdown every 21 seconds
-Math.random()>.5;
+    // touchdown every 21 seconds
+    Math.random()>.5;
 
 
-// hailMary touchdown
-Math.random()>.9;
+    // hailMary touchdown
+    Math.random()>.9;
 };
 
 function getRandomInt(min, max) {
