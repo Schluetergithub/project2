@@ -34,43 +34,18 @@ $(document).ready(function()
         gameInterval = setInterval(function() {
             intervalCount++;
             qbStats();
-
-            if(intervalCount == 10){
-                clearInterval(gameInterval);
-            }
-
-         }, 1000); // end of interval
-    
-    }); //end on onclick function
-
-    $('#simulate-btn').on('click',function(){
-       
-        gameInterval = setInterval(function() {
-            intervalCount++;
             rbStats();
-
-            if(intervalCount == 10){
-                clearInterval(gameInterval);
-            }
-     
-         }, 1000); // end of interval
-    
-    }); //end on onclick function
-
-    $('#simulate-btn').on('click',function(){
-       
-        gameInterval = setInterval(function() {
-            intervalCount++;
             wrStats();
 
             if(intervalCount == 10){
                 clearInterval(gameInterval);
             }
-            
+
          }, 1000); // end of interval
     
     }); //end on onclick function
-     
+
+    
 });//end of doc.ready
 
 
