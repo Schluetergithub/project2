@@ -11,10 +11,13 @@ th {
 }
 #header{
   font-family: 'Ultra', serif;
+  color: yellow;
+  text-shadow: 2px 2px 4px rgb(43, 43, 5);
 }
 
 .topper{
   font-family: 'Titillium Web', sans-serif;
+  color: white;
 }
 .options{
   font-family: 'Titillium Web', sans-serif;
