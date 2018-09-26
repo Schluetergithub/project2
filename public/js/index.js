@@ -31,7 +31,11 @@ $(document).ready(function () {
   // Grab the variables and values from the row and save them.
 
   function save() {
-    var qbTotal = $("#qbYards").text();
+    var qbTotal = {
+      yards: $("#qbYards").text(),
+      touchdowns: $("#qbTouchdowns").text(),
+      score: $("#qbScore").text()
+    };
     console.log(qbTotal);
   };
 
