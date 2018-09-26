@@ -31,12 +31,32 @@ $(document).ready(function () {
   // Grab the variables and values from the row and save them.
 
   function save() {
-    var qbTotal = {
-      yards: $("#qbYards").text(),
-      touchdowns: $("#qbTouchdowns").text(),
-      score: $("#qbScore").text()
+    var userData = {
+      username: username,
+      qb: $("#qb").text(),
+      qbYards: $("#qbYards").text(),
+      qbTouchdowns: $("#qbTouchdowns").text(),
+      qbScore: $("#qbScore").text(),
+      rb: $("#rb").text(),
+      rbYards: $("#rbYards").text(),
+      rbTouchdowns: $("#rbTouchdowns").text(),
+      rbScore: $("#rbScore").text(),
+      wr: $("#wr").text(),
+      wrYards: $("#wrYards").text(),
+      wrTouchdowns: $("#wrTouchdowns").text(),
+      wrScore: $("#wrScore").text(),
     };
-    console.log(qbTotal);
+
+    $.post("api/users", userData)
+
+      .then(function(data) {
+
+        console.log(data);
+
+      })
+
+      console.log("Saving user information to the database.");
+
   };
 
   //-------------------------------------------------------------------------
