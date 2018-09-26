@@ -1,3 +1,15 @@
+var $simulateBtn = $("#simulate-btn");
+
+
+// AJAX Call GET and DISPLAY 
+
+
+
+
+
+
+//-------------------------------------------------------------------------
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");

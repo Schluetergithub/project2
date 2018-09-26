@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Players = sequelize.define("players", {
+      teamName: DataTypes.STRING,
+
       qb_name: DataTypes.STRING,
       qb_routename: DataTypes.STRING,
       passingYards_gained: DataTypes.INTEGER,
@@ -21,6 +23,7 @@ module.exports = function(sequelize, DataTypes) {
       wrGameScore: DataTypes.INTEGER,
       wrPlayerValue: DataTypes.INTEGER,
 
+      overallTeamScore: DataTypes.INTEGER,
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE
     });
