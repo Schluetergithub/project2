@@ -3,60 +3,92 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+
   <title>Fantasy Star League</title>
 </head>
 
 <body>
-<div id="home">
+  <div id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Welcome to Fantasy Star League!</h1>
+        </div>
+      </div>
+      <br>
 
-<button id="simulate">Simulate</button>
+      <div class="row">
+        <div class="col-6 text-center">
+          <h4>Enter a Username</h4>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="createusername" placeholder="Username">
+            </div>
+          </form>
+        </div>
+        <div class="col-6 text-center">
 
+          <h4>Select a Team</h4>
+          <select>
+            <option value="team1">Team 1</option>
+            <option value="team2">Team 2</option>
+            <option value="team3">Team 3</option>
+          </select>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>Welcome!</h1>
-        <h2>Fantasy Star League</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Username</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="username-text" placeholder="Enter Username">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Password</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="password-text" placeholder="Enter Password">
-          </div>
-          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" arial-label="First group">
-              <button id="submit" class="btn btn-primary float-right">Login</button>
+          <br>
+
+          <div class="row">
+            <div class="col-12 text-center">
+              <br>
+              <table align="center">
+                <tr>
+                  <th>Player</th>
+                  <th>Yards Gained</th>
+                  <th>Touchdowns</th>
+                  <th>Score</th>
+                </tr>
+
+                <tr id="qbRow">
+                  <td>QB - Tom Brady</td>
+                </tr>
+
+                <tr id="rbRow">
+                  <td>RB - Todd Gurley</td>
+                </tr>
+
+                <tr id="wrRow">
+                  <td>WR - Brandon Cooks</td>
+                </tr>
+
+              </table>
             </div>
-            <div class="btn-group mr-2" role="group" arial-label="Second group">
-              <a href="/signup" class="btn btn-primary float-right">Register</a>
-            </div>
-            <div class="btn-group mr-2" role="group" arial-label="Third group">
-              <a href="/guest" class="btn btn-primary float-right">Continue as Guest</a>
-            </div>
           </div>
-        </form>
-<!--        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
--->
+
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <button id="simulate-btn">Simulate</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="js/index.js"></script>
 <script type="text/javascript" src="../randomstats.js"></script>
 
 </body>
