@@ -3,9 +3,17 @@ var $simulateBtn = $("#simulate-btn");
 
 // AJAX Call GET and DISPLAY 
 
+// Submit Button Function
 
+function grabUsername(){
+  var username = $("#createusername").val();
+  console.log(username);
+}
 
-
+// After 5 seconds, show the save button.
+function showSavebtn() {
+  var 
+}
 
 
 //-------------------------------------------------------------------------
@@ -109,3 +117,9 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+// ----------------------------------------------------------------------
+
+
+$simulateBtn.on("click", grabUsername);
