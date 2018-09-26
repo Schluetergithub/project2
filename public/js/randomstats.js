@@ -72,7 +72,7 @@ function qbStats() {
     (qbTouchdownScoreConverted = qbTouchdownsTotal * 6);
    
 
-    (qbTotalScore = qbTouchdownScoreConverted + qbYardsTotal);
+    (qbTotalScore = qbTouchdownScoreConverted + qbYardsTotal / 10);
     $("#qbScore").html(qbTotalScore);
     console.log("qbTotalScore " + qbTotalScore);
 
@@ -105,7 +105,7 @@ function rbStats() {
     (rbTouchdownScoreConverted = rbTouchdownsTotal * 6);
    
 
-    (rbTotalScore = rbTouchdownScoreConverted + rbYardsTotal);
+    (rbTotalScore = rbTouchdownScoreConverted + rbYardsTotal / 10);
     $("#rbScore").html(rbTotalScore);
     console.log("rbTotalScore " + rbTotalScore);
 };
@@ -132,7 +132,7 @@ function wrStats() {
     (wrTouchdownScoreConverted = wrTouchdownsTotal * 6);
    
 
-    (wrTotalScore = wrTouchdownScoreConverted + wrYardsTotal);
+    (wrTotalScore = wrTouchdownScoreConverted + wrYardsTotal / 10);
     $("#wrScore").html(wrTotalScore);
     console.log("wrTotalScore " + wrTotalScore);
 
