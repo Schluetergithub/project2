@@ -39,6 +39,7 @@ $(document).ready(function () {
     console.log(qbTotal);
   };
 
+  
   //-------------------------------------------------------------------------
 
   // Get references to page elements

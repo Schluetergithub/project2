@@ -16,10 +16,29 @@ th {
 }
 
 .topper{
+  font-size: 32px;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+}
+.toppers{
+  font-size: 20px;
   font-family: 'Titillium Web', sans-serif;
   color: white;
 }
 .options{
   font-family: 'Titillium Web', sans-serif;
   color: white;
+}
+#simulate-btn{
+  background-color:pink;
+  color:rgb(187, 233, 62);
+}
+#yg {
+  padding-left: 2px;
+}
+#td {
+  padding-left: 2px;
+}
+#score {
+  padding-left: 2px;
 }
