@@ -8,10 +8,14 @@
 
 // add things for fumbles and interceptions
 
+var qbYardsTotal = 0;
+
 $(document).ready(function()
 {
     var gameInterval;
     var intervalCount = 0;
+
+
 
     $('#simulate-btn').on('click',function(){
        
@@ -20,6 +24,9 @@ $(document).ready(function()
             qbStats();
             // rbStats();
             // wrStats();
+
+
+
             if(intervalCount == 10){
                 clearInterval(gameInterval);
             }
@@ -42,6 +49,10 @@ function qbStats() {
     // qb calculations
     // every 7 seconds
     var qbYards = getRandomInt(-5, 25);
+
+    (qbYardsTotal = qbYardsTotal + qbYards);
+    $("#qbYards").html(qbYardsTotal);
+
     console.log(qbYards);
 
     // touchdown every 21 seconds
