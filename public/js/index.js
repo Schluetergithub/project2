@@ -5,7 +5,8 @@ $(document).ready(function () {
   var username;
 
   $("#save-btn").hide();
-
+  
+  
   // ------------------------------------
   // Simulate Button Function
   function simulate() {

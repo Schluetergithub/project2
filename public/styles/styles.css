@@ -11,12 +11,73 @@ th {
 }
 #header{
   font-family: 'Ultra', serif;
+  color: yellow;
+  text-shadow: 2px 2px 4px rgb(43, 43, 5);
 }
 
 .topper{
+  font-size: 25px;
   font-family: 'Titillium Web', sans-serif;
+  color: white;
+}
+.toppers{
+  font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
 }
 .options{
   font-family: 'Titillium Web', sans-serif;
   color: white;
+}
+#simulate-btn{
+  background-color: rgb(107, 180, 117);
+}
+#save-btn{
+  background-color: rgb(107, 180, 117);
+}
+#yg {
+  padding-left: 2px;
+}
+#td {
+  padding-left: 2px;
+}
+#score {
+  padding-left: 2px;
+}
+#createusername {
+  color:white;
+}
+.nav-wrapper{
+  background-color:grey;
+}
+
+#logopic {
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 4%;
+  height: 60%;
+}
+#logopic2 {
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 6%;
+  height: 60%;
+}
+#logopic3 {
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 6%;
+  height: 60%;
+}
+#logopic4 {
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 6%;
+  height: 60%;
+}
+#logopic5 {
+  margin-bottom: .3%;
+  margin-left: 2%;
+  width: 6%;
+  height: 60%;
 }
