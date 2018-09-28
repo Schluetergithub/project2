@@ -9,7 +9,7 @@
   "test": {
     "username": "root",
     "password": "jpsql008$",
-    "database": "testdb",
+    "database": "fantasyPlayers_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
