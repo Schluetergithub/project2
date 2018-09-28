@@ -11,17 +11,17 @@
 var qbYardsTotal = 0;
 
 var qbTouchdownsTotal = 0;
-var qbTouchdownScoreConverted;
+var qbTouchdownScoreConverted = 0;
 var qbTotalScore = 0;
 
 var rbYardsTotal = 0;
 var rbTouchdownsTotal = 0;
-var rbTouchdownScoreConverted;
+var rbTouchdownScoreConverted = 0;
 var rbTotalScore = 0;
 
 var wrYardsTotal = 0;
 var wrTouchdownsTotal = 0;
-var wrTouchdownScoreConverted;
+var wrTouchdownScoreConverted = 0;
 var wrTotalScore = 0;
 
 $(document).ready(function()
@@ -38,21 +38,43 @@ $(document).ready(function()
             rbStats();
             wrStats();
 
-            if(intervalCount == 10){
+            if(intervalCount == 20){
                 clearInterval(gameInterval);
             }
 
-         }, 1000); // end of interval
+            if(intervalCount / 5 == 1) {
+                qbTouchdowns();
+                rbTouchdowns();
+                wrTouchdowns();
+            }
+
+            if(intervalCount / 12 == 1) {
+                qbTouchdowns();
+                rbTouchdowns();
+                wrTouchdowns();
+            }
+
+            if(intervalCount / 16 == 1) {
+                qbTouchdowns();
+                rbTouchdowns();
+                wrTouchdowns();
+            }
+
+            if(intervalCount == 20) {
+                qbHailMary();
+                wrHailMary();
+            }
+
+         }, 3000); // end of interval
     
     }); //end on onclick function
 
     
 });//end of doc.ready
 
-
+// qb yards
 function qbStats() {
-    // qb calculations
-    // every 7 seconds
+
     var qbYards = getRandomInt(-5, 25);
 
     (qbYardsTotal = qbYardsTotal + qbYards);
@@ -60,14 +82,30 @@ function qbStats() {
 
     console.log("qbYards " + qbYards);
 
-    // touchdown every 21 seconds
+
+    // var qbTouchdowns = getRandomInt(0,2);
+
+    // (qbTouchdownsTotal = qbTouchdownsTotal + qbTouchdowns);
+    // $("#qbTouchdowns").html(qbTouchdownsTotal);
+    // console.log("qbTouchdowns " + qbTouchdowns);
+
+    // (qbTouchdownScoreConverted = qbTouchdownsTotal * 6);
+   
+
+    (qbTotalScore = qbTouchdownScoreConverted + qbYardsTotal / 10);
+    $("#qbScore").html(qbTotalScore);
+    console.log("qbTotalScore " + qbTotalScore);
+
+}; //end of qbyards
+
+// qb touchdowns
+function qbTouchdowns() {
 
     var qbTouchdowns = getRandomInt(0,2);
 
     (qbTouchdownsTotal = qbTouchdownsTotal + qbTouchdowns);
     $("#qbTouchdowns").html(qbTouchdownsTotal);
     console.log("qbTouchdowns " + qbTouchdowns);
-    //Math.random()>.5;
 
     (qbTouchdownScoreConverted = qbTouchdownsTotal * 6);
    
@@ -76,16 +114,23 @@ function qbStats() {
     $("#qbScore").html(qbTotalScore);
     console.log("qbTotalScore " + qbTotalScore);
 
-    //Math.random()>.5;
+}; // end of qbtouchdowns
 
+// qbHailMary
+function qbHailMary() {
 
-    // hailMary touchdown every 59 seconds
-    //Math.random()>.9;
-};
+    var qbTouchdowns = Math.random()>.9;
 
+    if(true) {
+        qbTouchdowns++;
+        (qbTouchdownsTotal = qbTouchdownsTotal + qbTouchdowns);
+        $("#qbTouchdowns").html(qbTouchdownsTotal);
+    };
+
+}; //end of qbHailMary
+
+// rbYards
 function rbStats() {
-    // rb calculations
-    // every 5 seconds 
     var rbYards = getRandomInt(-5, 25);
 
     (rbYardsTotal = rbYardsTotal + rbYards);
@@ -94,13 +139,28 @@ function rbStats() {
     console.log("rbyards " + rbYards);
 
 
-    // touchdown every 25 seconds
+    // var rbTouchdowns = getRandomInt(0,2);
+
+    // (rbTouchdownsTotal = rbTouchdownsTotal + rbTouchdowns);
+    // $("#rbTouchdowns").html(rbTouchdownsTotal);
+    // console.log("rbTouchdowns " + rbTouchdowns);
+
+    // (rbTouchdownScoreConverted = rbTouchdownsTotal * 6);
+   
+
+    (rbTotalScore = rbTouchdownScoreConverted + rbYardsTotal / 10);
+    $("#rbScore").html(rbTotalScore);
+    console.log("rbTotalScore " + rbTotalScore);
+
+}; //end of rbYards
+
+function rbTouchdowns() {
+
     var rbTouchdowns = getRandomInt(0,2);
 
     (rbTouchdownsTotal = rbTouchdownsTotal + rbTouchdowns);
     $("#rbTouchdowns").html(rbTouchdownsTotal);
     console.log("rbTouchdowns " + rbTouchdowns);
-    //Math.random()>.5;
 
     (rbTouchdownScoreConverted = rbTouchdownsTotal * 6);
    
@@ -108,11 +168,11 @@ function rbStats() {
     (rbTotalScore = rbTouchdownScoreConverted + rbYardsTotal / 10);
     $("#rbScore").html(rbTotalScore);
     console.log("rbTotalScore " + rbTotalScore);
-};
+
+}
 
 function wrStats() {
-    // wr calculations
-    // wr every 7 seconds
+
     var wrYards = getRandomInt(-5, 25);
 
     (wrYardsTotal = wrYardsTotal + wrYards);
@@ -121,13 +181,29 @@ function wrStats() {
     console.log("wryards " + wrYards);
 
 
-    // touchdown every 21 seconds
+    // var wrTouchdowns = getRandomInt(0,2);
+
+    // (wrTouchdownsTotal = wrTouchdownsTotal + wrTouchdowns);
+    // $("#wrTouchdowns").html(wrTouchdownsTotal);
+    // console.log("wrTouchdowns " + wrTouchdowns);
+
+    // (wrTouchdownScoreConverted = wrTouchdownsTotal * 6);
+   
+
+    (wrTotalScore = wrTouchdownScoreConverted + wrYardsTotal / 10);
+    $("#wrScore").html(wrTotalScore);
+    console.log("wrTotalScore " + wrTotalScore);
+
+}; //end of wrYards
+
+// wrTouchdownds
+function wrTouchdowns() {
+
     var wrTouchdowns = getRandomInt(0,2);
 
     (wrTouchdownsTotal = wrTouchdownsTotal + wrTouchdowns);
     $("#wrTouchdowns").html(wrTouchdownsTotal);
     console.log("wrTouchdowns " + wrTouchdowns);
-    //Math.random()>.5;
 
     (wrTouchdownScoreConverted = wrTouchdownsTotal * 6);
    
@@ -136,10 +212,27 @@ function wrStats() {
     $("#wrScore").html(wrTotalScore);
     console.log("wrTotalScore " + wrTotalScore);
 
+}; // end of wrTouchdowns
 
-    // hailMary touchdown
-    // Math.random()>.9;
-};
+// wrHailMary
+function wrHailMary() {
+
+    var wrTouchdowns = Math.random()>.9;
+
+    if(true) {
+        wrTouchdowns++;
+        (wrTotalScore = wrTouchdownScoreConverted + wrYardsTotal / 10);
+        $("#wrScore").html(wrTotalScore);
+    };
+
+}; // end of wrHailMary
+
+
+
+
+
+
+
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
