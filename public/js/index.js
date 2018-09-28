@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   $("#save-btn").hide();
   
-  
+  // $(".dropdown-trigger").dropdown();
   // ------------------------------------
   // Simulate Button Function
   function simulate() {
