@@ -31,7 +31,9 @@ $(document).ready(function()
 
 
     $('#simulate-btn').on('click',function(){
-       
+
+       $('#simulate-btn').hide();
+
         gameInterval = setInterval(function() {
             intervalCount++;
             qbStats();
@@ -39,6 +41,7 @@ $(document).ready(function()
             wrStats();
 
             if(intervalCount == 20){
+                $('#simulate-btn').show();
                 clearInterval(gameInterval);
             }
 
